@@ -4,6 +4,8 @@
 <head>
   <%= render 'layouts/partials/title_meta', title: @title %>
 
+  <%= yield :styles %>
+
   <%= render 'layouts/partials/head_css' %>
 </head>
 
@@ -29,6 +31,8 @@
 <%= render 'layouts/partials/customizer' %>
 
 <%= render 'layouts/partials/footer_scripts' %>
+
+<%= yield :scripts %>
 
 </body>
 </html>

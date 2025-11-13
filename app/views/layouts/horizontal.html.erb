@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html <%= @html_attributes || "" %> data-layout="topnav">
+<html <%= @html_attributes || '' %> data-layout="topnav">
 
 <head>
   <%= render 'layouts/partials/title_meta', title: @title %>
 
+  <%= yield :styles %>
+
   <%= render 'layouts/partials/head_css' %>
 </head>
 
-<body <%= @body_attributes || "" %>>
+<body <%= @body_attributes || '' %>>
 
 <div class="wrapper">
 
@@ -29,6 +31,8 @@
 <%= render 'layouts/partials/customizer' %>
 
 <%= render 'layouts/partials/footer_scripts' %>
+
+<%= yield :scripts %>
 
 </body>
 </html>

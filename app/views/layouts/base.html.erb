@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html <%= @html_attributes || "" %>>
+<html <%= @html_attributes || '' %>>
 
 <head>
 <%= render 'layouts/partials/title_meta', title: @title %>
 
+<%= yield :styles %>
+
 <%= render 'layouts/partials/head_css' %>
 </head>
 
-<body <%= @body_attributes || "" %>>
+<body <%= @body_attributes || '' %>>
 
-    <%= yield %>
+<%= yield %>
+
+<%= yield :scripts %>
 
 </body>
 
